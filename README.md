@@ -8,9 +8,9 @@ I've included the ti ez430 Chronos code, as well as the python code that's runni
 The chronos code strips down the UI on the watch to the barest essentials - showing the time and allowing to select and send an alert. 
 
 ## Raspberry Pi
-The raspberry pi is responsible for sending email notification(s) when an alert event is received from the watch, and the code for it lives in /home/alerter.
+The raspberry pi is responsible for sending email notification(s) when an alert event is received from the watch.  I booted up a fresh install of Raspbian and created an ~/alerter folder to house my code.
 
-There's an "alerter.py" script that runs at startup to listen for chronos events, and it is based on the following code:
+Inside the ~/alerter folder is an "alerter.py" script that runs at startup to listen for chronos events, and it is based on the following code:
 https://web.archive.org/web/20130222052925/http://chemicaloliver.net/programming/receiving-ti-ez430-chronos-button-presses-in-processing-and-python/
 
 When an "S1" button press is received, alerter executes "sendalert.py" which calls a function in "email_handler.py" to actually send the email.  The recipients are hard-coded in sendalert.py.  Email_handler.py uses the smtplib, MIMEMultipart and MIMEText libs to handle sending - more info and instructions can be found here:
