@@ -4,7 +4,7 @@ this is the code that goes along with my Stupid Simple Alert Watch project on Ha
 
 I've included the ti ez430 Chronos code, as well as the python code that's running on a raspberry pi with attached cc1101 dongle
 
-## ti Chronos
+## ti Chronos Code
 My chronos code strips down the UI on the watch to the barest essentials - showing the time and allowing the user to select and send an alert.
 
 The watch runs on a modified version of the ez430_Chronos software that comes on the device and thankfully, their code is pretty easy to follow.
@@ -22,7 +22,7 @@ I also disabled bluerobin and changed the processRequests function in the main.c
 
 For confirmation that the Help alert is being sent, the watch flashes while it transmits and beeps five times upon completion of the transmission.  There is no acknowledgement from the pi that an alert was received - might be something for later, but it hasn't been necessary so far.
 
-## Raspberry Pi
+## Raspberry Pi Code
 The raspberry pi is responsible for sending email notification(s) when an alert event is received from the watch.  I booted up a fresh install of Raspbian and created an ~/alerter folder to house my code.
 
 Inside the ~/alerter folder is an "alerter.py" script that runs at startup to listen for chronos events, and it is based on the following code:
