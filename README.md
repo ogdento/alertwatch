@@ -7,7 +7,7 @@ I've included the ti ez430 Chronos code, as well as the python code that's runni
 ## ti Chronos Code
 My chronos code strips down the UI on the watch to the barest essentials - showing the time and allowing the user to select and send an alert.
 
-The watch runs on a modified version of the ez430_Chronos software that comes on the device and thankfully, their code is pretty easy to follow.
+The watch runs on a modified version of the ez430_Chronos software that comes on the device (Software Projects\Chronos Watch\CCS\Sports Watch) and thankfully, their code is pretty easy to follow.
 
 Here's a comment from their code that illustrates what shows on the display as you scroll through functions by pressing the * (top left) and # (bottom left) buttons:
 
